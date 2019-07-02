@@ -3,20 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-.icon-size {
-  width: 20px;
-  height: 20px; 
-  color: #667580; 
-}
 
 body {
   background: #e6ecf0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
-input, button {
+input,
+button {
   outline: 0;
 }
 
@@ -29,7 +25,7 @@ input, button {
 header#main-header {
   height: 46px;
   background: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .25);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 1;
 }
@@ -58,7 +54,7 @@ header#main-header nav ul li {
 }
 
 header#main-header nav ul li:first-child {
-  margin:0;
+  margin: 0;
 }
 
 header#main-header nav ul li img {
@@ -77,12 +73,12 @@ header#main-header div.side input {
   border-radius: 16px;
   color: #667581;
   font-size: 12px;
-  background: #f5f8fa url('/images/search.svg') no-repeat 190px center;
+  background: #f5f8fa url("/images/search.svg") no-repeat 190px center;
 }
 
 header#main-header div.side img {
   height: 34px;
-  width: 35px;
+  width: 34px;
   border-radius: 50%;
   margin: 0 15px;
 }
@@ -116,10 +112,9 @@ div.banner {
 }
 
 div.bar {
-  display: flex;
   height: 59px;
   background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 div.bar .content {
@@ -127,6 +122,7 @@ div.bar .content {
   justify-content: space-between;
   align-items: center;
   padding-left: 285px;
+  height: 100%;
 }
 
 div.bar .content ul {
@@ -141,7 +137,17 @@ div.bar .content ul li {
   justify-content: center;
   align-items: center;
   padding: 0 15px;
-  position: relative;  
+  position: relative;
+}
+
+div.bar .content ul li.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #3bb9e3;
 }
 
 div.bar .content ul li span {
@@ -159,16 +165,6 @@ div.bar .content ul li strong {
 
 div.bar .content ul li.active strong {
   color: #3bb9e3;
-}
-
-div.bar .content ul li .active::after {
-  content: '';
-  width: 100%;
-  height: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #3bb9e3;
 }
 
 div.bar .content .actions {
@@ -190,4 +186,107 @@ div.bar .content .actions button {
   border-radius: 16px;
 
   margin-right: 20px;
+}
+
+div.wrapper-content {
+  display: flex;
+}
+
+div.wrapper-content aside.profile {
+  width: 260px;
+}
+
+div.wrapper-content aside.profile img.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -130px;
+}
+
+div.wrapper-content aside.profile h1 {
+  font-size: 21px;
+  color: #1f2226;
+  margin-top: 10px;
+}
+
+div.wrapper-content aside.profile span {
+  font-size: 14px;
+  color: #53626c;
+}
+
+div.wrapper-content aside.profile p {
+  font-size: 14px;
+  color: #1f2226;
+  margin-top:15px;
+}
+
+div.wrapper-content aside.profile ul {
+  list-style: none;
+  margin-top:20px;
+}
+
+div.wrapper-content aside.profile ul.list li {
+  font-size: 14px;
+  color: #657786;
+
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+div.wrapper-content aside.profile ul.list li:first-child {
+  margin: 0;
+}
+
+div.wrapper-content aside.profile ul.list li img {
+  margin-right: 10px;
+}
+
+div.wrapper-content aside.profile .widget {
+  margin-top: 20px;
+}
+
+div.wrapper-content aside.profile .widget strong {
+  font-weight: normal;
+  color: #3bb9e3;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+div.wrapper-content aside.profile .widget strong img {
+  margin-right: 5px;
+}
+
+div.wrapper-content aside.profile .followers ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+div.wrapper-content aside.profile .followers ul li {
+  width: 45px;
+  height: 45px;
+  background: #d0d5d9;
+  border-radius: 50%;
+  flex: 1 0 auto;
+  margin: 0 5px 5px 0;
+}
+
+div.wrapper-content aside.profile .images ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.wrapper-content aside.profile .images ul li {
+  width: 80px;
+  height: 80px;
+  background: #d0d5d9;
+  border-radius: 8px;
+  flex: 1 0 auto;
+  margin: 0 5px 5px 0;
 }
